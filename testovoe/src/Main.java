@@ -17,8 +17,8 @@ public class Main {
         int x;
         int y;
         boolean arabic = true;
-
-        if (strArray.length > 3 || strArray.length < 1) {
+        System.out.println(strArray.length);
+        if (strArray.length != 3) {
             throw new Error("");
         }
 
