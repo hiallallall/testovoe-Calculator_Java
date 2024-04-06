@@ -42,13 +42,23 @@ public class Main {
         }
         throw new Error("wrong operand");
 
-//                switch (strArray[1]){
-//                    case "-" -> answer = x-y;
-//                    case "+" -> answer = x+y;
-//                    case "/" -> answer = x/y;
-//                    case "*" -> answer = x*y;
-//                    default -> throw new Error("wrong operand");
-//                }
+//        switch (operand) {
+//            case "-": {
+//                return x - y;
+//            }
+//            case "+": {
+//                return x + y;
+//            }
+//            case "/": {
+//                return x / y;
+//            }
+//            case "*": {
+//                return x * y;
+//            }
+//            default: {
+//                throw new Error("wrong operand");
+//            }
+//        }
     }
 
     public static String calculateRoman(int answer) {
