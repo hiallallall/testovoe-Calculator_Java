@@ -1,10 +1,5 @@
-import jdk.jshell.spi.ExecutionControl;
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
-
-import java.util.SimpleTimeZone;
 
 public class Main {
     static int x;
@@ -35,16 +30,19 @@ public class Main {
     public static int calculate(String operand, int x, int y) {
         if (operand.equals("+")) { //start operandCheck
             return x + y;
-        } else if (operand.equals("-")) {
-            return x - y;
-        } else if (operand.equals("*")) {
-            return x * y;
-        } else if (operand.equals("/")) {
-            return x / y;
-        } else {
-            throw new Error("wrong operand");
         }
-        //                switch (strArray[1]){
+        if (operand.equals("-")) {
+            return x - y;
+        }
+        if (operand.equals("*")) {
+            return x * y;
+        }
+        if (operand.equals("/")) {
+            return x / y;
+        }
+        throw new Error("wrong operand");
+
+//                switch (strArray[1]){
 //                    case "-" -> answer = x-y;
 //                    case "+" -> answer = x+y;
 //                    case "/" -> answer = x/y;
@@ -80,15 +78,12 @@ public class Main {
         return axe.toString();
     }
 
-    ;
-
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Ввести:");
         String string = s.nextLine();
         String[] strArray = string.split(" ");
         System.out.println(Arrays.toString(strArray));
-
 
 
         if (strArray.length != 3) {
